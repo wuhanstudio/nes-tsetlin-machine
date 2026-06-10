@@ -2,6 +2,11 @@
 
 A Beginner's Guide and toolkit for NES game creation.
 
+```
+create-nes-game build
+create-nes-game run
+```
+
 [<img alt="It's a game!" src="demo.png" style="width: 480px" width="480">](https://nes-starter-kit.nes.science/)
 
 ![](console.jpg)
