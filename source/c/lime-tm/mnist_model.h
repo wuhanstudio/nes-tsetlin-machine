@@ -11,7 +11,7 @@
 
 #include "source/c/library/bank_helpers.h"
 
-#define PRG_BANK_TM 4
+#define PRG_BANK_TM 1
 
 // Store most of our data in the given bank.
 CODE_BANK(PRG_BANK_TM);

@@ -79,16 +79,18 @@ void draw_my_screen(void) {
     // Evaluate
     tsetlin_evaluate(model, img, votes, &predicted_class);
 
+    // Print predicted class
     put_str(NTADR_A(0, 28), "Prediction:");
     itoa(predicted_class, tm_buffer);
     put_str(NTADR_A(12, 28), tm_buffer);
 
+    // Print votes for each class
     put_str(NTADR_A(14, 28), "Votes:");
 
     itoa(votes[0], tm_buffer);
     put_str(NTADR_A(21, 28), tm_buffer);
     itoa(votes[1], tm_buffer);
-    put_str(NTADR_A(23, 28), tm_buffer);
+    put_str(NTADR_A(25, 28), tm_buffer);
 
     ppu_on_all();
 
@@ -97,7 +99,7 @@ void draw_my_screen(void) {
 
 void handle_my_input(void) {
     if (pad_trigger(0) & PAD_START) {
-        mnist_index = (mnist_index + 1) % 10;
+        mnist_index = (mnist_index + 1) % 2;
         gameState = GAME_STATE_TITLE_DRAW;
     }
 }
