@@ -7,9 +7,11 @@ create-nes-game build
 create-nes-game run
 ```
 
-[<img alt="It's a game!" src="demo.png" style="width: 480px" width="480">](https://nes-starter-kit.nes.science/)
+![](0.jpg)
+![](1.jpg)
 
-![](console.jpg)
+[<img alt="It's a game!" src="console.jpg" style="width: 480px" width="480">](https://nes-starter-kit.nes.science/)
+
 **Current game version:** 2.0.0
 
 **Minimum create-nes-game version:** 1.0.10
