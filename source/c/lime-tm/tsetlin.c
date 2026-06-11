@@ -6,11 +6,13 @@
     LOG_MODULE_REGISTER(tsetlin);
 #endif
 
-int tsetlin_evaluate(Tsetlin* model, char* input, int *out_votes, char* out_class) {
+int tsetlin_evaluate(Tsetlin* model, char* input, int *out_votes) {
     char c;
+    char j;
+
     // Find class with maximum votes
     char max_class = 0;
-    int max_votes = out_votes[0];
+    int max_votes = 0;
 
     // memset(out_votes, 0, model->n_class * sizeof(int));
     for (c = 0; c < model->n_class; c++)
@@ -20,7 +22,6 @@ int tsetlin_evaluate(Tsetlin* model, char* input, int *out_votes, char* out_clas
 
     for (c = 0; c < model->n_class; c++)
     {
-        char j;
         for (j = 0; j <(char) model->n_clause / 2; j++)
         {
             const ClauseCompressed* p_clause = &model->clauses_compressed[c * model->n_clause + j * 2];
@@ -31,6 +32,9 @@ int tsetlin_evaluate(Tsetlin* model, char* input, int *out_votes, char* out_clas
         }
     }
 
+    max_class = 0;
+    max_votes = out_votes[max_class];
+
     for (c = 1; c < model->n_class; c++)
     {
         if (out_votes[c] > max_votes)
@@ -40,7 +44,5 @@ int tsetlin_evaluate(Tsetlin* model, char* input, int *out_votes, char* out_clas
         }
     }
 
-    *out_class = max_class;
-
-    return 0;
+    return max_class;
 }

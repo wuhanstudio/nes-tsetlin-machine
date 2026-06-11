@@ -36,8 +36,8 @@ const int rows = 28, cols = 28;
 char img[784];
 
 // Outputs for model evaluation
-char predicted_class = 0;
-int votes[10];
+int predicted_class = 0;
+int votes[2];
 
 void draw_my_screen(void) {
     int i;
@@ -77,10 +77,11 @@ void draw_my_screen(void) {
     put_str(NTADR_A(29, 27), tm_buffer);
 
     // Evaluate
-    tsetlin_evaluate(model, img, votes, &predicted_class);
+    predicted_class =tsetlin_evaluate(model, img, votes);
 
     // Print predicted class
     put_str(NTADR_A(0, 28), "Prediction:");
+
     itoa(predicted_class, tm_buffer);
     put_str(NTADR_A(12, 28), tm_buffer);
 
@@ -89,6 +90,7 @@ void draw_my_screen(void) {
 
     itoa(votes[0], tm_buffer);
     put_str(NTADR_A(21, 28), tm_buffer);
+
     itoa(votes[1], tm_buffer);
     put_str(NTADR_A(25, 28), tm_buffer);
 

@@ -19,7 +19,7 @@ extern "C" {
 
 void tsetlin_step(Tsetlin* model, char* X_img, int y_target, int T, float s);
 
-int tsetlin_evaluate(Tsetlin* model, char* input, int *out_votes, char* out_class);
+int tsetlin_evaluate(Tsetlin* model, char* input, int *out_votes);
 
 #ifdef __cplusplus
 }
