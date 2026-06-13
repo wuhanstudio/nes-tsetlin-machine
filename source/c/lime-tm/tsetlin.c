@@ -27,8 +27,8 @@ int tsetlin_evaluate(Tsetlin* model, char* input, int *out_votes) {
             const ClauseCompressed* p_clause = &model->clauses_compressed[c * model->n_clause + j * 2];
             const ClauseCompressed* n_clause = &model->clauses_compressed[c * model->n_clause + j * 2 + 1];
 
-            out_votes[c] += clause_evaluate(p_clause, input, model->n_state, model->n_feature, model->model_type);
-            out_votes[c] -= clause_evaluate(n_clause, input, model->n_state, model->n_feature, model->model_type);
+            out_votes[c] += clause_evaluate(p_clause, input, model->n_state, model->model_type);
+            out_votes[c] -= clause_evaluate(n_clause, input, model->n_state, model->model_type);
         }
     }
 

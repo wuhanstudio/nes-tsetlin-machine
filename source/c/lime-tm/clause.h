@@ -27,7 +27,7 @@
 extern "C" {
 #endif
 
-uint8_t clause_evaluate(const ClauseCompressed* clause, uint8_t* input, uint32_t n_state, uint32_t n_feature, ModelType type);
+uint8_t clause_evaluate(const ClauseCompressed* clause, uint8_t* input, uint32_t n_state, ModelType type);
 
 #ifdef __cplusplus
 }

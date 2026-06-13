@@ -1,6 +1,6 @@
 #include "clause.h"
 
-uint8_t clause_evaluate(const ClauseCompressed* clause, uint8_t* input, uint32_t n_state, uint32_t n_feature, ModelType type) {
+uint8_t clause_evaluate(const ClauseCompressed* clause, uint8_t* input, uint32_t n_state, ModelType type) {
     uint16_t n_pos_literal = clause->n_pos_literal;
     uint16_t n_neg_literal = clause->n_neg_literal;
 
