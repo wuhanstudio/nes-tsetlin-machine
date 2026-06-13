@@ -7,8 +7,8 @@ create-nes-game build
 create-nes-game run
 ```
 
-![](0.jpg)
-![](1.jpg)
+![](0.png)
+![](1.png)
 
 [<img alt="It's a game!" src="console.jpg" style="width: 480px" width="480">](https://nes-starter-kit.nes.science/)
 
