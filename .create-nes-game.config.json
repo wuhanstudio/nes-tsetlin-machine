@@ -21,7 +21,6 @@
     "console": "nes",
     "beforeStepActions": {
         "build": [
-            "tools/nes-starter-kit-tools/tmx2c 3 overworld levels/overworld.tmx source/c/generated/overworld"
         ]
     },
     "afterStepActions": {
