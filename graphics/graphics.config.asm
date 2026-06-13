@@ -8,14 +8,12 @@
 
     ; We just put the ascii tiles into both sprites and tiles. If you want to get more clever you could do something else.
     .incbin "graphics/ascii.chr"
-.segment "CHR_01"
-    .incbin "graphics/tiles.chr"
 
 ; Note: You can put your own separate chr files here to use them... we only use 3 in the demo. This is to avoid warnings,
 ; and make the rom a predictable size. Note that if you do this you'll have to tweak the engine to support it! There's
 ; hopefully a guide on how to do this in the repo.
+.segment "CHR_01"
 .segment "CHR_02"
-    .incbin "graphics/sprites.chr"
 .segment "CHR_03"
     .incbin "graphics/tiles.chr"
 .segment "CHR_04"

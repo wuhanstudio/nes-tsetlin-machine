@@ -26,8 +26,6 @@
     },
     "afterStepActions": {
         "build": [
-            "tools/nes-starter-kit-tools/chr2img graphics/tiles.chr graphics/palettes/main_bg.pal graphics/generated/tiles.png",
-            "tools/nes-starter-kit-tools/sprite_def2img ./source/c/sprites/sprite_definitions.c ./graphics/sprites.chr ./graphics/palettes/main_sprite.pal graphics/generated/sprites.png"
         ]
     },
     "extraDependencies": [{
