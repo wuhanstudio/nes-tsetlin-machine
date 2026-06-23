@@ -3,6 +3,7 @@
 A Beginner's Guide and toolkit for NES game creation.
 
 ```
+create-nes-game download-dependencies
 create-nes-game build
 create-nes-game run
 ```
